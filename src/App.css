@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/bg.jpg);
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  box-shadow: 0 0 5px 2px #0000004d;
+  transform-style: preserve-3d;
+  font-weight: 700;
+  height: 300px;
+  cursor: pointer;
+  transition: .15s;
+  margin: 50px 500px;
+  transform: perspective(1000px) rotateX(var(--rotate-X, 0));
+}
+
+.card.flipped {
+  transform: perspective(1000px) rotateX(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+.btndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px #ffffff;
+  border-radius: 20px;
+  background-color: #000000;
+  margin: 0 24px;
+  padding: 18px 40px;
+  font-weight: 600;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
